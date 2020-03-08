@@ -4084,6 +4084,40 @@ h6 {
   background-image: -ms-linear-gradient(0deg, rgba(188, 43, 255, 0.8) 0%, rgba(114, 73, 251, 0.8) 100%);
 }
 
+.logo_h {
+  font-weight: bold;
+  color: #fff !important;
+}
+
+.feature_item, .feature_item p {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.feature_item, .feature_item input {
+  margin-bottom: 10px;
+}
+
+.container h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.banner_btn {
+  margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .banner_btn {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+}
+
+
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
