@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../sub-assets/css/style.css">
         <link rel="stylesheet" href="../sub-assets/css/responsive.css">
     </head>
-    <body data-spy="scroll" data-target="#mainNav" data-offset="70">
+    <body data-spy="scroll" data-target="#mainNav" data-offset="70" class="animated fadeIn">
         
         <!--================Header Menu Area =================-->
         <header class="header_area">
@@ -50,6 +50,7 @@
         <!--================Home Banner Area =================-->
         <section class="home_banner_area" id="home">
             <div class="banner_inner">
+				<form action="#basis">
 				<div class="container">
 					<h1 >Compare Students</h1>
 					<div class="row banner_content">
@@ -59,7 +60,7 @@
 								<p>Click "choose file" to upload text file containing Student A details</p>
 								<div class="row">
 									<fieldset class="col-md-6">
-										<input type="text" placeholder="Type student A name" required>
+										<input type="text" placeholder="Type student A name" autofocus required>
 									</fieldset>
 									<fieldset class="col-md-6">
 										<input type="file" accept="text/plain" required>
@@ -82,46 +83,53 @@
 							</div>
 						</div>
 					</div>
-					<a class="banner_btn" href="#">Compare</a>
+					<button class="banner_btn" type="submit">Compare</button>
 				</div>
+				</form>
             </div>
         </section>
         <!--================End Home Banner Area =================-->
         
-        <!--================Feature Area =================-->
+        <!--================Basis Area =================-->
         <section class="feature_area p_120" id="basis">
+			<div class="container">
+				<div class="main_title">
+        			<h2>Percentage Similarity</h2>
+        			<p> <span style="color: blueviolet; font-weight: bold; font-size: 20px;">100% </span> similar</p>
+        		</div>
+			</div>
         	<div class="container">
         		<div class="main_title">
         			<h2>Basis of comparison</h2>
-        			<p>...</p>
+        			<p>How we arrived at our conclusion</p>
         		</div>
         		<div class="feature_inner row">
         			<div class="col-lg-3 col-md-6">
         				<div class="feature_item">
         					<img src="../sub-assets/img/icon/f-icon-1.png" alt="">
-        					<h4>Maintenance</h4>
-        					<p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.</p>
+        					<h4>Attendance</h4>
+        					<p>Our Algorithms compare the attendance of Student A relative to Student B. Based on information on the uploaded text files</p>
         				</div>
         			</div>
         			<div class="col-lg-3 col-md-6">
         				<div class="feature_item">
         					<img src="../sub-assets/img/icon/f-icon-1.png" alt="">
-        					<h4>Maintenance</h4>
-        					<p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.</p>
+        					<h4>Test Result</h4>
+        					<p>Our Algorithm compare test result of student A and student B for each course</p>
         				</div>
         			</div>
         			<div class="col-lg-3 col-md-6">
         				<div class="feature_item">
         					<img src="../sub-assets/img/icon/f-icon-1.png" alt="">
-        					<h4>Maintenance</h4>
-        					<p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.</p>
+        					<h4>Examination Result</h4>
+        					<p>Our Algorithm check for similarities in examination result for each course offered by both student.</p>
         				</div>
-        			</div>
+					</div>
         			<div class="col-lg-3 col-md-6">
         				<div class="feature_item">
         					<img src="../sub-assets/img/icon/f-icon-1.png" alt="">
-        					<h4>Maintenance</h4>
-        					<p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.</p>
+        					<h4>Project Result</h4>
+        					<p>Our Algorithm check for similarities in project results of student A and B.</p>
         				</div>
         			</div>
         		</div>

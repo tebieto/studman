@@ -4107,6 +4107,32 @@ h6 {
   margin-top: 20px;
 }
 
+#basis .feature_item {
+  min-height: 350px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.history_container {
+  width: 95%;
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  max-height: 70vh;
+  overflow-y: auto;
+  margin-bottom: 100px;
+}
+
+.post_item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  margin-bottom: 20px;
+}
+
 
 @media only screen and (max-width: 600px) {
   .banner_btn {
