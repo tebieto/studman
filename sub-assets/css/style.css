@@ -4133,12 +4133,21 @@ html {
   margin-bottom: 20px;
 }
 
+.banner_btn {
+  border: none;
+}
+
+.media-body p {
+  font-size: 12px !important;
+}
 
 @media only screen and (max-width: 600px) {
   .banner_btn {
     display: block;
     margin: auto;
     text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
 }
