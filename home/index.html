@@ -38,7 +38,7 @@
 							<ul class="nav navbar-nav menu_nav ml-auto">
 								<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li> 
 								<li class="nav-item"><a class="nav-link" href="../history">History</a></li>
-								<li class="nav-item"><a class="nav-link" href="../">Logout</a></li>
+								<li onclick="event.preventDefault(); logUserOut();" class="nav-item"><a class="nav-link" href="../">Logout</a></li>
 							</ul>
 						</div> 
 					</div>
@@ -50,7 +50,7 @@
         <!--================Home Banner Area =================-->
         <section class="home_banner_area" id="home">
             <div class="banner_inner">
-				<form action="#basis">
+				<form action="#basis" onsubmit="event.preventDefault(); initCompare();" name="compare">
 				<div class="container">
 					<h1 >Compare Students</h1>
 					<div class="row banner_content">
@@ -60,10 +60,10 @@
 								<p>Click "choose file" to upload text file containing Student A details</p>
 								<div class="row">
 									<fieldset class="col-md-6">
-										<input type="text" placeholder="Type student A name" autofocus required>
+										<input type="text" name="student_a_name" placeholder="Type student A name" autofocus required>
 									</fieldset>
 									<fieldset class="col-md-6">
-										<input type="file" accept="text/plain" required>
+										<input type="file" name="text_file_a" accept="text/plain" required>
 									</fieldset>
 								</div>
 							</div>
@@ -74,16 +74,16 @@
 								<p>Click "choose file" to upload text file containing Student B details</p>
 								<div class="row">
 									<fieldset class="col-md-6">
-										<input type="text" placeholder="Type student B name" required>
+										<input type="text" name="student_b_name" placeholder="Type student B name" required>
 									</fieldset>
 									<fieldset class="col-md-6">
-										<input type="file" accept="text/plain" required>
+										<input type="file" name="text_file_b" accept="text/plain" required>
 									</fieldset>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button class="banner_btn" type="submit">Compare</button>
+					<button class="banner_btn" id="compare-btn" type="submit">Compare</button>
 				</div>
 				</form>
             </div>
@@ -95,7 +95,7 @@
 			<div class="container">
 				<div class="main_title">
         			<h2>Percentage Similarity</h2>
-        			<p> <span style="color: blueviolet; font-weight: bold; font-size: 20px;">100% </span> similar</p>
+        			<p id="result">awaiting input...</p>
         		</div>
 			</div>
         	<div class="container">
@@ -171,6 +171,7 @@
         <script src="../vendor/counter-up/jquery.counterup.js"></script>
         <script src="../sub-assets/js/mail-script.js"></script>
         <script src="../vendor/popup/jquery.magnific-popup.min.js"></script>
-        <script src="../sub-assets/js/theme.js"></script>
+		<script src="../sub-assets/js/theme.js"></script>
+		<script src="./compare.js" type="module"></script>
     </body>
 </html>

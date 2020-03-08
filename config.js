@@ -1,3 +1,6 @@
-MOCK_API = "https://99898373-7632-46bd-ad56-c23a7874a1b9.mock.pstmn.io/"
+export const config = {
+    api: "https://00cfe854-087d-44d2-ae99-fe2f2debff4e.mock.pstmn.io",
+    logout: ()=>window.location="../",
+    result: () => window.location="./#basis",
 
-module.exports = {MOCK_API}
+    }
