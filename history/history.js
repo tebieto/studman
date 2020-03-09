@@ -3,7 +3,7 @@ import {validateToken, findHistory, remoteLogout} from "../server.js";
 
 $( document ).ready(function() {
     validateToken({"token":localStorage.getItem('token')}, "../");
-    findHistory()
+    findHistory();
 });
 
 
