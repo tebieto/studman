@@ -4135,6 +4135,7 @@ html {
 
 .banner_btn {
   border: none;
+  cursor: pointer;
 }
 
 .media-body p {

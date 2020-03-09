@@ -1,4 +1,4 @@
-import {config} from "../config.js";
+import {config} from "../../config.js";
 
 const  xhr = new XMLHttpRequest();
 let isActive = false;
@@ -6,6 +6,7 @@ let isLoggedin = false;
 
 $( document ).ready(function() {
     validateToken({"token":localStorage.getItem('token')});
+   findHistoryDetail(config.getUrlVars()['history_id'])
 });
 
 
@@ -30,14 +31,30 @@ let completeVerification = (data) => {
     }
 }
 
+
+ let findHistoryDetail = (id) => {
+    xhr.open("GET", config.api+'/history/id/'+id, true);
+    xhr.setRequestHeader('token', localStorage.getItem('token'));
+    xhr.send()
+    xhr.onload = function() {
+    let data = JSON.parse(this.response)
+    $('#detail-h1').html(`${data.student_a_name} vs ${data.student_b_name}`);
+    $('#a-h4').html(data.student_a_name);
+    $('#b-h4').html(data.student_b_name);
+    $('#compare-result').html(`<span style="color: blueviolet; font-weight: bold; font-size: 20px;">${data.similarities}</span>`)
+    isActive= false;
+    
+    }
+}
+
 window.initCompare = () => {
     isActive = true;
     $('#compare-btn').html('<i class="fa fa-spinner fa-spin"></i>');     
     let form = document.compare;
     let data= {
-        student_a_name: form.student_a_name.value, 
+        student_a_name: $('#a-h4').text(), 
         text_file_a: form.text_file_a.value, 
-        student_b_name: form.student_b_name.value, 
+        student_b_name: $('#b-h4').text(), 
         text_file_b: form.text_file_b.value,
     };
 

@@ -50,40 +50,34 @@
         <!--================Home Banner Area =================-->
         <section class="home_banner_area" id="home">
             <div class="banner_inner">
-				<form action="#basis">
+				<form action="#basis" onsubmit="event.preventDefault(); initCompare();" name="compare">
 				<div class="container">
-					<h1 >Details - StudentWithID1 vs StudentWithID2</h1>
+					<h1 >Details - <span id="detail-h1">Loading...</span></h1>
 					<div class="row banner_content">
 						<div class="col-lg-6 col-md-6">
 							<div class="feature_item">
-								<h4>Student A</h4>
+								<h4 id="a-h4">Loading...</h4>
 								<p>Click "choose file" to upload text file containing Student A details</p>
 								<div class="row">
-									<fieldset class="col-md-6">
-										<input type="text" placeholder="Type student A name" autofocus required>
-									</fieldset>
-									<fieldset class="col-md-6">
-										<input type="file" accept="text/plain" required>
+									<fieldset class="col-md-12">
+										<input type="file" name="text_file_a" accept="text/plain" required>
 									</fieldset>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
 							<div class="feature_item">
-								<h4>Student B</h4>
+								<h4 id="b-h4">Loading...</h4>
 								<p>Click "choose file" to upload text file containing Student B details</p>
 								<div class="row">
-									<fieldset class="col-md-6">
-										<input type="text" placeholder="Type student B name" required>
-									</fieldset>
-									<fieldset class="col-md-6">
-										<input type="file" accept="text/plain" required>
+									<fieldset class="col-md-12">
+										<input type="file" name="text_file_b" accept="text/plain" required>
 									</fieldset>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button class="banner_btn" type="submit">Rerun</button> <a class="banner_btn" style="color: #fff !important; background: blue;" href="#basis">View Result</a>
+					<button class="banner_btn" type="submit">Rerun Compare</button> <a class="banner_btn" style="color: #fff !important; background: blue;" href="#basis">View Result</a>
 				</div>
 				</form>
             </div>
@@ -95,7 +89,7 @@
 			<div class="container">
 				<div class="main_title">
         			<h2>Percentage Similarity</h2>
-        			<p> <span style="color: blueviolet; font-weight: bold; font-size: 20px;">100% </span> similar</p>
+        			<p id="compare-result">Loading...</p>
         		</div>
 			</div>
         	<div class="container">
@@ -171,6 +165,7 @@
         <script src="../../vendor/counter-up/jquery.counterup.js"></script>
         <script src="../../sub-assets/js/mail-script.js"></script>
         <script src="../../vendor/popup/jquery.magnific-popup.min.js"></script>
-        <script src="../../sub-assets/js/theme.js"></script>
+		<script src="../../sub-assets/js/theme.js"></script>
+		<script src="./details.js" type="module"></script>
     </body>
 </html>
