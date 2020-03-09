@@ -42,7 +42,7 @@ let completeVerification = (data) => {
     data.history.forEach(i=> {
         result+=`<div class="media post_item"><div class="media-body"><a href="details/?history_id=${i.id}"><h5>${i.student_a_name} vs ${i.student_b_name}</h5></a><p>${i.date}</p></div></div>`
     });
-    $('#history-container').html(result);
+    $('#history').html(result);
     isActive= false;
     $('#compare-btn').html("Compare");
     
