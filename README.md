@@ -6,3 +6,6 @@ Bootstrap, JQuery, Animate.css, Font Awesome, Iconic Font. All served via CDN
 
 ## Server
 Postman Mocks
+
+## Deployed to
+https://tebieto.github.io/studman/
