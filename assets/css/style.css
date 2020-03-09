@@ -4143,7 +4143,9 @@ html {
 }
 
 #compare-result span {
+  position: relative;
   font-size: 30px !important;
+  top: 20px !important;
 }
 
 @media only screen and (max-width: 600px) {
