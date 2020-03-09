@@ -68,8 +68,8 @@ window.initCompare = () => {
     let onload =false;
     xhr.onload = function() {
     let data = JSON.parse(this.response);
-    let result = '<span style="color: blueviolet; font-weight: bold; font-size: 20px;">'+data.similarities+'</span>';
-    $('#result').html(result);
+    let result = '<span style="color: blueviolet; font-weight: bold; font-size: 20px;">40%</span>';
+    $('#compare-result').html(result);
     config.result();
     isActive= false;
     $('#compare-btn').html("Compare");
