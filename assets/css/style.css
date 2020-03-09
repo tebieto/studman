@@ -4155,6 +4155,10 @@ html {
     margin-bottom: 20px;
   }
 
+  h1 {
+    font-size: 30px !important;
+  }
+
 }
 
 

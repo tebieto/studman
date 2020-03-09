@@ -9,5 +9,4 @@ export const config = {
         });
         return vars;
     }
-
-    }
+}
