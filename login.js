@@ -1,5 +1,5 @@
- import {config} from "./config.js";
- import {login} from "./server.js";
+import {config} from "./config.js";
+import {login} from "./server.js";
 
 window.initLogin = () => {
     $('#login-btn').html('<i class="fa fa-spinner fa-spin"></i>');     
