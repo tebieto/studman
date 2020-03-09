@@ -58,7 +58,7 @@
 										<input type="text" name="student_a_name" placeholder="Type student A name" autofocus required>
 									</fieldset>
 									<fieldset class="col-md-6">
-										<input type="file" name="text_file_a" accept=".txt" required>
+										<input type="file" name="text_file_a" accept=".txt" onchange="validateFile('text_file_a')" required>
 									</fieldset>
 								</div>
 							</div>
@@ -72,7 +72,7 @@
 										<input type="text" name="student_b_name" placeholder="Type student B name" required>
 									</fieldset>
 									<fieldset class="col-md-6">
-										<input type="file" name="text_file_b" accept=".txt" required>
+										<input type="file" name="text_file_b" accept=".txt" onchange="validateFile('text_file_b')"  required>
 									</fieldset>
 								</div>
 							</div>

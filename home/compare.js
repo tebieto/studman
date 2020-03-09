@@ -19,6 +19,11 @@ window.initCompare = () => {
 }
 
 
+window.validateFile = (id) => {
+    return config.validateFile(id)
+}
+
+
 window.logUserOut = () => {
     remoteLogout({"token":localStorage.getItem('token')});
     setTimeout(()=> {

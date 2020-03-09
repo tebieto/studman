@@ -25,6 +25,9 @@ window.initCompare = () => {
     compare(data);
 }
 
+window.validateFile = (id) => {
+    return config.validateFile(id)
+}
 
 window.logUserOut = () => {
     remoteLogout({"token":localStorage.getItem('token')});
